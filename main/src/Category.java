@@ -19,13 +19,11 @@ public class Category {
         events.add(event);
     }
 
-    public String getCategoryInfo() {
-        StringBuilder info = new StringBuilder("Category: " + title + "\nDescription: " + description + "\nEvents:\n");
+    public void getCategoryInfo() {
+        System.out.println("Category: " + title + "\nDescription: " + description + "\nEvents:");
         for (Event event : events) {
-            info.append(event.getDetails());
-            info.append("\n");
+            System.out.println(event.getDetails());
         }
-        return info.toString();
     }
     
 }

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Report {
-        private List<Event> events;
+    private List<Event> events;
 
     public Report(List<Event> events) {
         this.events = events;
@@ -13,13 +13,12 @@ public class Report {
         List<Event> result = new ArrayList<>();
         for (Event event : events) {
             if ((event.getDate().isEqual(startDate) || event.getDate().isAfter(startDate)) &&
-                (event.getDate().isEqual(endDate) || event.getDate().isBefore(endDate))) {
+                    (event.getDate().isEqual(endDate) || event.getDate().isBefore(endDate))) {
                 result.add(event);
             }
         }
         return result;
     }
-
 
     public List<Event> findEventByName(String namePart) {
         List<Event> result = new ArrayList<>();
