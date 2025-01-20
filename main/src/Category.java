@@ -21,8 +21,8 @@ public class Category {
 
     public void getCategoryInfo() {
         System.out.println("Category: " + title + "\nDescription: " + description + "\nEvents:");
-        for (Event event : events) {
-            System.out.println(event.getDetails());
+        for (int i = 0; i < events.size(); i++) {
+            System.out.println(events.get(i).getDetails());
         }
     }
     
